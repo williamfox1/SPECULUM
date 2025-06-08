@@ -1,0 +1,526 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(180deg, #0e0e1d, #0e0e1d);
+}
+/* Contenedor de la barra de navegación */
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: linear-gradient(45deg, #A11B71, #1C2B88);
+}
+
+/* Logo a la izquierda */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Menú centrado */
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Redes sociales a la derecha */
+.redes-sociales {
+    display: flex;
+    gap: 10px;
+}
+
+.redes-sociales img {
+    vertical-align: middle;
+}
+/* Hero (sección de presentación) */
+.hero {
+    height: 100vh;
+    background-image: url('imagenes/Fondo_Presentación.jpg'); /* Cambia por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Capa oscura encima de la imagen para que el logo se vea mejor */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco la imagen */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo central grande */
+.hero-logo {
+    width: 60%;
+    max-width: 700px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #000000aa); /* Sombra para que resalte */
+}
+/* Sección mosaico principal */
+.mosaico-secciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #0e0e1d;
+}
+
+.bloque {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bloque:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(26, 26, 26, 0.2);
+}
+
+.texto-bloque {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 25px;
+    border-radius: 8px;
+}
+
+/* Fondos únicos por bloque */
+#bloque-acerca {
+    background-image: url('imagenes/Fondo_Acerca.jpg');
+}
+
+#bloque-galeria {
+    background-image: url('imagenes/Fondo_Galeria.jpg');
+}
+
+#bloque-contacto {
+    background-image: url('imagenes/Fondo_Contacto.jpg');
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(45deg, #A11B71, #1C2B88);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+audio {
+  display: none;
+}
+
+.quienes-somos {
+  position: relative;
+  background-image: url('imagenes/Fondo_quienes_somos.jpg'); /* Reemplaza con tu fondo */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+}
+
+.equipo h2 {
+    text-align: center;
+    color: #A11B71;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+
+.quienes-somos .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+  padding: 60px 20px;
+}
+
+.quienes-somos .contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: justify;
+}
+
+.quienes-somos h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.quienes-somos p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.galeria-integrantes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+}
+
+.tarjeta {
+    width: 220px;
+    height: 280px;
+    perspective: 1000px; /* Necesario para el efecto 3D */
+}
+
+.tarjeta-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.tarjeta:hover .tarjeta-inner {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-front,
+.tarjeta-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.tarjeta-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-back {
+    background-color: #A11B71;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.galeria-container {
+    padding: 40px 20px;
+    color: white;
+}
+
+.fotos-destacadas{
+    text-align: center;
+}
+
+.fotos-destacadas h2 {
+    color: #A11B71;
+    margin-bottom: 30px;
+}
+
+.grid-destacadas-especial {
+    display: grid;
+    grid-template-areas:
+        "v h1"
+        "v h2"
+        "v h3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grid-destacadas-especial .vertical {
+    grid-area: v;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid-destacadas-especial .horizontal:nth-of-type(1) {
+    grid-area: h1;
+}
+
+.grid-destacadas-especial .horizontal:nth-of-type(3) {
+    grid-area: h2;
+}
+
+.grid-destacadas-especial .horizontal:nth-of-type(4) {
+    grid-area: h3;
+}
+
+.grid-destacadas-especial img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-destacadas-especial img:hover {
+    transform: scale(1.05);
+}
+
+
+.separador {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.separador span {
+    font-size: 2rem;
+    color: #A11B71;
+    display: inline-block;
+    border-top: 2px solid #A11B71;
+    padding-top: 10px;
+}
+
+.galeria-general{
+    text-align: center;
+}
+
+.galeria-general h2 {
+    color: #A11B71;
+    margin-bottom: 30px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+.grid-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background-color: #1f1f1f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+  color: #A11B71;
+  margin-top: 40px;
+}
+
+.contacto {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0e0e1d;
+}
+
+.contacto h2 {
+  color: #A11B71;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #261949;
+  color: white;
+  font-size: 14px;
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+  color: #aaa;
+}
+
+.formulario-contacto button {
+  background-color: #A11B71;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #87145d;
+}
+
+.redes-contacto {
+  margin-top: 30px;
+}
+
+.redes-contacto img {
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.redes-contacto img:hover {
+  transform: scale(1.1);
+}
+
+.agradecimiento {
+  color: #A11B71;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-top: 2px solid #A11B71;
+}
+
+.agradecimiento h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.agradecimiento p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.card-front a img {
+  cursor: pointer;
+}
+
+/* Estilo del modal */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}

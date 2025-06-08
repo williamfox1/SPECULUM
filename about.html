@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="barra">
+            <!-- Izquierda: logo -->
+            <div class="logo-container">
+                <img id="FOX" src="imagenes/SPECULUM ICONO.svg" width="70" height="70" alt="Icono">
+                <img id="logo" src="imagenes/SPECULUM TEXTO.svg" width="100" height="70" alt="Logo texto">
+            </div>
+
+            <!-- Centro: menú -->
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">ACERCA DEL PROYECTO</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+
+            <!-- Derecha: redes sociales -->
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="imagenes/Instagram.png" alt="Instagram" width="30">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61577267726192" target="_blank">
+                    <img src="imagenes/Facebook.png" alt="Facebook" width="30">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="quienes-somos">
+  <div class="overlay">
+    <div class="contenido">
+      <h2>¿Quiénes Somos?</h2>
+      <p>
+        <strong>Speculum</strong> es un estudio fotográfico que abraza la modernidad y la transformación.
+      </p>
+      <p>
+        Creemos que cada persona tiene una esencia única, y nuestras imágenes buscan reflejarla con autenticidad.
+      </p>
+      <p>
+        Nuestro símbolo, el dragón, representa esa capacidad de cambio y diversidad. En cada cultura, los dragones toman formas distintas: sabios, feroces, protectores, místicos. Así como ellos, nuestras fotos no tienen una sola forma de ser, sino que se adaptan, evolucionan y se reinventan con cada cliente.
+      </p>
+      <p>
+        El nombre <strong>Speculum</strong>, que significa “espejo” en latín, nos recuerda que una fotografía no solo captura una imagen, sino que también refleja una identidad, un momento, una posibilidad.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="equipo">
+    <h2>Conoce al equipo</h2>
+    <div class="galeria-integrantes">
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <img src="imagenes/Integrantes/Integrante1.jpg" alt="Jacqueline Vanessa Fuentes Quijano">
+                </div>
+                <div class="tarjeta-back">
+                    <p>Jacqueline Vanessa Fuentes Quijano</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <img src="imagenes/Integrantes/Integrante2.jpg" alt="Mauricio Andres Jimenez Cuervo">
+                </div>
+                <div class="tarjeta-back">
+                    <p>Mauricio Andres Jimenez Cuervo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <img src="imagenes/Integrantes/Integrante3.jpg" alt="Jose Miguel Martinez Lopez">
+                </div>
+                <div class="tarjeta-back">
+                    <p>Jose Miguel Martinez Lopez</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <div class="tarjeta-inner">
+                <div class="tarjeta-front">
+                    <img src="imagenes/Integrantes/Integrante4.jpg" alt="William Daniel Mendez Velazquez">
+                </div>
+                <div class="tarjeta-back">
+                    <p>William Daniel Mendez Velazquez</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  </div>
+</section>
+  
+
+
+    <footer class="footer">
+    <p>&copy; 2025 SPECULUM. Todos los derechos reservados.</p>
+</footer>
+
+<audio id="musicaFondo" loop>
+  <source src="musica/Michael FK - Where Flowers Bloom.mp3" type="audio/mpeg">
+  Tu navegador no soporta el audio.
+</audio>
+
+
+<script>
+const logo = document.getElementById('logo');
+  const audio = document.getElementById('musicaFondo');
+
+  let musicaIniciada = false;
+
+  logo.addEventListener('click', () => {
+    if (!musicaIniciada) {
+      audio.volume = 0;
+      audio.play().then(() => {
+        musicaIniciada = true;
+        let vol = 0;
+        const fadeIn = setInterval(() => {
+          if (vol < 0.5) {
+            vol += 0.01;
+            audio.volume = vol;
+          } else {
+            clearInterval(fadeIn);
+          }
+        }, 100);
+      }).catch(err => {
+        console.warn("Error al iniciar el audio:", err);
+      });
+    }
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="barra">
+            <!-- Izquierda: logo -->
+            <div class="logo-container">
+                <img id="FOX" src="imagenes/SPECULUM ICONO.svg" width="70" height="70" alt="Icono">
+                <img id="logo" src="imagenes/SPECULUM TEXTO.svg" width="100" height="70" alt="Logo texto">
+            </div>
+
+            <!-- Centro: menú -->
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="about.html">ACERCA DEL PROYECTO</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+
+            <!-- Derecha: redes sociales -->
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="imagenes/Instagram.png" alt="Instagram" width="30">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61577267726192" target="_blank">
+                    <img src="imagenes/Facebook.png" alt="Facebook" width="30">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="galeria-container">
+
+        <!-- Sección de fotos destacadas -->
+        <section class="fotos-destacadas">
+            <h2>Fotos Retrato</h2>
+            <div class="grid-galeria">
+
+                <!-- Tarjetas destacadas -->
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/destacada1.jpg" alt="Destacada 1">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano medio con angulo normal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/destacada2.jpg" alt="Destacada 2">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano medio con angulo normal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/destacada3.jpg" alt="Destacada 3">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano medio con enfoque al producto en primer plano. Angulo normal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/destacada4.jpg" alt="Destacada 4">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano medio corto contrapicado</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- División -->
+        <div class="separador">
+            <span>&#10084;</span>
+        </div>
+
+        <!-- Modal para ver imagen -->
+        <div id="modal" class="modal">
+            <span id="cerrar-modal" class="cerrar-modal">&times;</span>
+            <img class="modal-contenido" id="imagen-ampliada" alt="Imagen ampliada">
+        </div>
+
+        <!-- Galería general -->
+        <section class="galeria-general">
+            <h2>Fotografías Producto</h2>
+            <div class="grid-galeria">
+
+                <!-- Tarjetas galería -->
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/Producto1.JPG" alt="Foto 1">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano detalle: Ligeramente contrapicado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/Producto2.JPG" alt="Foto 2">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano medio con angulo normal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/Producto3.png" alt="Foto 3">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano medio con angulo normal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/Producto4.png" alt="Foto 4">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano detalle normal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/Producto5.JPG" alt="Foto 5">
+                        </div>
+                        <div class="card-back">
+                            <p>Plano detalle normal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="imagenes/galeria/Producto6.JPG" alt="Foto 6">
+                        </div>
+                        <div class="card-back">
+                            <p>Primer plano normal con enfoque selectivo</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de agradecimiento -->
+        <section class="agradecimiento">
+            <h2>Gracias por acompañarnos</h2>
+            <p>
+                Agradecemos profundamente a todas las personas que hicieron posible este proyecto. Cada imagen capturada es reflejo de esfuerzo, pasión y creatividad compartida. Con gratitud y respeto, el equipo de Speculum.
+            </p>
+             
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SPECULUM. Todos los derechos reservados.</p>
+    </footer>
+
+    <audio id="musicaFondo" loop>
+        <source src="musica/Michael FK - Unfold.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
+    <script>
+        const logo = document.getElementById('logo');
+        const audio = document.getElementById('musicaFondo');
+
+        let musicaIniciada = false;
+
+        logo.addEventListener('click', () => {
+            if (!musicaIniciada) {
+                audio.volume = 0;
+                audio.play().then(() => {
+                    musicaIniciada = true;
+                    let vol = 0;
+                    const fadeIn = setInterval(() => {
+                        if (vol < 0.5) {
+                            vol += 0.01;
+                            audio.volume = vol;
+                        } else {
+                            clearInterval(fadeIn);
+                        }
+                    }, 100);
+                }).catch(err => {
+                    console.warn("Error al iniciar el audio:", err);
+                });
+            }
+        });
+
+        const tarjetas = document.querySelectorAll('.card-front img, .card-back');
+        const modal = document.getElementById('modal');
+        const imagenAmpliada = document.getElementById('imagen-ampliada');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        tarjetas.forEach(elemento => {
+            elemento.addEventListener('click', (e) => {
+                const card = e.currentTarget.closest('.card');
+                const img = card.querySelector('img');
+                imagenAmpliada.src = img.src;
+                modal.style.display = 'block';
+            });
+        });
+
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            imagenAmpliada.src = '';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                imagenAmpliada.src = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
